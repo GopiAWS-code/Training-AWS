@@ -23,3 +23,21 @@ git chechout .    (To revert the changes from working dir)
 git reset HEAD~1  (To revert the changes)
 git reset --mixed HEAD~1 (To revert the changes from local to working dir)
 git reset --soft HEAD~1 (To revert the changes from local to staging/index)
+
+ step-by-step guide for cloning a repository from one GitHub account and pushing it to a new repository under a different GitHub account:
+1.Forking
+Log in to your GitHub account.
+Navigate to the repository on the othersGithub account.
+Click the "Fork" button at the top right corner of the repository page.
+This will create a copy of the repository in your GitHub account (ourGithub).
+2.cloning
+git clone https://github.com/othergithub/A.git
+cd A
+git remote remove origin
+git remote add origin https://github.com/ourGithub/A-copy.git
+git push -u origin --all
+git push -u origin --tags
+git submodule update --init --recursive
+
+
+
