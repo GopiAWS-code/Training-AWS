@@ -2,27 +2,32 @@ https://dzone.com/articles/top-20-git-commands-with-examples
 
 git config
 git init
-git clone
-git add
-git commit
+git clone ----(clone the repository)
+git add . (add cahnges)
+git commit -m ""(commit the changes)
 git diff
 git reset
 git status
 git rm
-git log
+git log (shows the commit history)
 git show
 git tag
-git branch
+git branch (check the current branch)
 git checkout
 git merge
 git remote
 git push
-git pull
-git stash
+git pull origin ---(pull latest from source code)
+git stash (changes are not gone if we checkout in to another branch)
+git stash pop (stash changes came back)
 git chechout .    (To revert the changes from working dir)
 git reset HEAD~1  (To revert the changes)
 git reset --mixed HEAD~1 (To revert the changes from local to working dir)
 git reset --soft HEAD~1 (To revert the changes from local to staging/index)
+git checkout -- .(undo all files changes)
+git checkout -- <file>(undo perticular file changes)
+
+
 
  step-by-step guide for cloning a repository from one GitHub account and pushing it to a new repository under a different GitHub account:
 1.Forking
