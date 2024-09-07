@@ -7,3 +7,5 @@ vi /lib/systemd/system/jenkins.service
 systemctl daemon-reload
 systemctl start jenkins
 systemctl status jenkins
+
+sudo lsof -i -n -P | grep LISTEN----->check which port which is ruuning
